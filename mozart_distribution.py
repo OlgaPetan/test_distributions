@@ -152,6 +152,9 @@ def get_valid_splits_six_groups(df):
                                 treatment_population_4,
                                 treatment_population_5
                             ))
+                            # Stop if we've collected 20 valid splits
+                            if len(valid_splits) >= 20:
+                                return valid_splits
     
     return valid_splits
 
