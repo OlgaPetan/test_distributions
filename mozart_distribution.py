@@ -82,8 +82,9 @@ def get_valid_splits_four_groups(df):
                         treatment_population_2,
                         treatment_population_3
                     ))
-    
-    return valid_splits
+                # Stop if we've collected 20 valid splits
+                    if len(valid_splits) >= 20:
+                        return valid_splits
 
 # Step 4: Generate all possible splits of the first digits into 6 groups
 def get_valid_splits_six_groups(df):
